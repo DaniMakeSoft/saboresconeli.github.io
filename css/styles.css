@@ -1,0 +1,253 @@
+/* =========================================================
+   Sabores con Eli — estilos
+   Paleta: cacao, rosa empolvado, dorado
+   Tipografía: Fraunces (display) / Work Sans (texto) / Space Mono (datos)
+   ========================================================= */
+
+:root {
+  --cacao: #3b2417;
+  --cacao-suave: #5c3a26;
+  --rosa: #e3b9b1;
+  --rosa-suave: #f3e2dd;
+  --dorado: #c79a4b;
+  --crema: #faf6f0;
+  --texto: #2c1c12;
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Work Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--texto);
+  background: var(--crema);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--cacao);
+  line-height: 1.15;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dorado);
+  margin-bottom: 8px;
+}
+
+/* ---------- HEADER ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--crema);
+  border-bottom: 1px solid var(--rosa-suave);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  gap: 24px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--cacao);
+  text-decoration: none;
+  font-weight: 600;
+}
+.logo span { color: var(--dorado); font-style: italic; }
+
+.main-nav { display: flex; gap: 28px; }
+.main-nav a {
+  text-decoration: none;
+  color: var(--cacao-suave);
+  font-size: 0.95rem;
+}
+.main-nav a:hover { color: var(--dorado); }
+
+.btn-whatsapp {
+  background: var(--cacao);
+  color: var(--crema);
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.btn-whatsapp:hover { background: var(--dorado); color: var(--cacao); }
+
+/* ---------- HERO ---------- */
+.hero {
+  padding: 120px 0 90px;
+  background: linear-gradient(180deg, var(--rosa-suave), var(--crema));
+  text-align: center;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin-bottom: 20px;
+}
+.hero-text {
+  max-width: 520px;
+  margin: 0 auto 32px;
+  color: var(--cacao-suave);
+}
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--dorado); color: var(--cacao); }
+.btn-outline { border: 1px solid var(--cacao); color: var(--cacao); }
+
+/* ---------- SECTIONS ---------- */
+.section { padding: 90px 0; }
+.nosotros { text-align: center; }
+.nosotros p:not(.eyebrow) { max-width: 640px; margin: 0 auto; color: var(--cacao-suave); }
+.menu h2, .nosotros h2 { margin-bottom: 24px; }
+
+/* ---------- MENU TABS ---------- */
+.menu { text-align: center; }
+.menu-tabs {
+  display: inline-flex;
+  gap: 8px;
+  background: var(--rosa-suave);
+  padding: 6px;
+  border-radius: 999px;
+  margin: 0 auto 48px;
+}
+.tab-btn {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--cacao-suave);
+  cursor: pointer;
+}
+.tab-btn.active { background: var(--cacao); color: var(--crema); }
+
+.menu-panel { display: none; text-align: left; }
+.menu-panel.active { display: block; }
+
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.ticket-card {
+  position: relative;
+  background: #fff;
+  border: 1px dashed var(--dorado);
+  border-radius: 12px;
+  padding: 24px;
+}
+.ticket-card::before,
+.ticket-card::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: var(--crema);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.ticket-card::before { left: -8px; }
+.ticket-card::after { right: -8px; }
+
+.ticket-code {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--dorado);
+}
+.ticket-card h3 { margin: 8px 0 6px; font-size: 1.2rem; }
+.ticket-card p { color: var(--cacao-suave); font-size: 0.9rem; margin-bottom: 16px; }
+.ticket-price {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--cacao);
+}
+
+/* ---------- PEDIDOS ---------- */
+.pedidos {
+  background: var(--cacao);
+  color: var(--crema);
+  text-align: center;
+}
+.pedidos h2 { color: var(--crema); }
+.pedidos p:not(.eyebrow) { max-width: 480px; margin: 0 auto 32px; color: var(--rosa-suave); }
+.pedidos .btn-primary { background: var(--dorado); color: var(--cacao); }
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  background: var(--crema);
+  padding: 60px 0 24px;
+  border-top: 1px solid var(--rosa-suave);
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.footer-logo { margin-bottom: 10px; }
+.footer-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--cacao-suave);
+}
+
+/* ---------- SCROLL REVEAL ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 720px) {
+  .header-inner { flex-wrap: wrap; }
+  .main-nav { order: 3; width: 100%; justify-content: center; gap: 18px; }
+  .hero { padding: 90px 0 60px; }
+}

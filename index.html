@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabores con Eli — Repostería y comida para llevar</title>
+<meta name="description" content="Repostería artesanal y comida para llevar. Tartas, dulces y platos caseros hechos con cariño.">
+
+<!-- Tipografías -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..900;1,300..900&family=Work+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Estilos -->
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#inicio" class="logo">Sabores <span>con Eli</span></a>
+    <nav class="main-nav">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#menu">Menú</a>
+      <a href="#pedidos">Pedidos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="https://wa.me/34600000000" class="btn-whatsapp" target="_blank" rel="noopener">
+      Pedir por WhatsApp
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="inicio" class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">Repostería artesanal · Comida para llevar</p>
+    <h1 class="reveal">Hecho a mano,<br>pensado para ti</h1>
+    <p class="hero-text reveal">
+      Tartas, dulces y platos caseros preparados cada día con ingredientes
+      de verdad. Recoge en tienda o pide para llevar.
+    </p>
+    <div class="hero-actions reveal">
+      <a href="#menu" class="btn btn-primary">Ver el menú</a>
+      <a href="https://wa.me/34600000000" class="btn btn-outline" target="_blank" rel="noopener">Hacer pedido</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOSOTROS ============ -->
+<section id="nosotros" class="section nosotros">
+  <div class="container">
+    <p class="eyebrow reveal">Nuestra historia</p>
+    <h2 class="reveal">De horno a mesa, sin atajos</h2>
+    <p class="reveal">
+      En Sabores con Eli cada receta pasa por manos que la cuidan de
+      principio a fin. Nada de mezclas industriales ni relleno de vitrina:
+      horneamos poco y bien, cada día, para que lo que te llevas a casa
+      sepa igual que si lo hubieras hecho tú.
+    </p>
+  </div>
+</section>
+
+<!-- ============ MENÚ ============ -->
+<section id="menu" class="section menu">
+  <div class="container">
+    <p class="eyebrow reveal">Carta</p>
+    <h2 class="reveal">Nuestro menú</h2>
+
+    <div class="menu-tabs reveal">
+      <button class="tab-btn active" data-tab="dulces">Dulces</button>
+      <button class="tab-btn" data-tab="salados">Salados</button>
+      <button class="tab-btn" data-tab="bebidas">Bebidas</button>
+    </div>
+
+    <div class="menu-panel active" id="dulces">
+      <div class="ticket-grid">
+        <article class="ticket-card">
+          <span class="ticket-code">D-01</span>
+          <h3>Tarta de queso</h3>
+          <p>Horneada al estilo tradicional, textura cremosa.</p>
+          <span class="ticket-price">18,50 €</span>
+        </article>
+        <article class="ticket-card">
+          <span class="ticket-code">D-02</span>
+          <h3>Brownie de chocolate</h3>
+          <p>Chocolate negro 70% y nuez de California.</p>
+          <span class="ticket-price">3,20 €</span>
+        </article>
+        <article class="ticket-card">
+          <span class="ticket-code">D-03</span>
+          <h3>Croissant relleno</h3>
+          <p>Hojaldre de mantequilla con crema pastelera.</p>
+          <span class="ticket-price">2,80 €</span>
+        </article>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="salados">
+      <div class="ticket-grid">
+        <article class="ticket-card">
+          <span class="ticket-code">S-01</span>
+          <h3>Empanada casera</h3>
+          <p>Masa fina, relleno de atún o carne.</p>
+          <span class="ticket-price">4,50 €</span>
+        </article>
+        <article class="ticket-card">
+          <span class="ticket-code">S-02</span>
+          <h3>Quiche de verduras</h3>
+          <p>Con verduras de temporada y queso curado.</p>
+          <span class="ticket-price">5,90 €</span>
+        </article>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="bebidas">
+      <div class="ticket-grid">
+        <article class="ticket-card">
+          <span class="ticket-code">B-01</span>
+          <h3>Café de especialidad</h3>
+          <p>Tueste propio, molido al momento.</p>
+          <span class="ticket-price">1,80 €</span>
+        </article>
+        <article class="ticket-card">
+          <span class="ticket-code">B-02</span>
+          <h3>Limonada natural</h3>
+          <p>Con menta fresca y un toque de jengibre.</p>
+          <span class="ticket-price">2,50 €</span>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PEDIDOS ============ -->
+<section id="pedidos" class="section pedidos">
+  <div class="container pedidos-inner">
+    <p class="eyebrow reveal">¿Cómo pedir?</p>
+    <h2 class="reveal">Encarga en un mensaje</h2>
+    <p class="reveal">
+      Escríbenos por WhatsApp con lo que quieras y te confirmamos la hora
+      de recogida. Sin colas, sin esperas.
+    </p>
+    <a href="https://wa.me/34600000000" class="btn btn-primary reveal" target="_blank" rel="noopener">
+      Escribir por WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ============ CONTACTO / FOOTER ============ -->
+<footer id="contacto" class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="logo footer-logo">Sabores <span>con Eli</span></p>
+      <p>Calle Ejemplo, 12 · Madrid</p>
+      <p>Martes a domingo · 9:00–20:00</p>
+    </div>
+    <div>
+      <p>info@saboresconeli.es</p>
+      <p>+34 600 00 00 00</p>
+    </div>
+  </div>
+  <p class="footer-note">© 2026 Sabores con Eli. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Script -->
+<script src="js/main.js"></script>
+</body>
+</html>

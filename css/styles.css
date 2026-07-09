@@ -261,6 +261,7 @@ h1, h2, h3 {
 .pedidos h2 { color: var(--crema); }
 .pedidos p:not(.eyebrow) { max-width: 480px; margin: 0 auto 32px; color: var(--rosa-suave); }
 .pedidos .btn-primary { background: var(--dorado); color: var(--cacao); }
+.pedidos .btn-outline { border: 1px solid var(--crema); color: var(--crema); }
 
 /* ---------- FOOTER ---------- */
 .site-footer {
@@ -295,6 +296,102 @@ h1, h2, h3 {
 
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- GALERÍA DE TRABAJOS ---------- */
+.trabajos-galeria { text-align: center; }
+.galeria-intro { max-width: 480px; margin: 0 auto 40px; color: var(--cacao-suave); }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  text-align: left;
+}
+
+.gallery-item {
+  position: relative;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--rosa-suave);
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img,
+.gallery-item:focus-visible img {
+  transform: scale(1.05);
+}
+
+@media (min-width: 600px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+}
+@media (min-width: 900px) {
+  .gallery-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+}
+
+/* ---------- LIGHTBOX (visor a pantalla completa) ---------- */
+.lightbox {
+  border: none;
+  padding: 0;
+  background: transparent;
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+}
+
+.lightbox[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox::backdrop {
+  background: rgba(20, 12, 8, 0.92);
+}
+
+.lightbox img {
+  max-width: 92vw;
+  max-height: 82vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightbox-caption {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: var(--crema);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 0 24px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: var(--crema);
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 8px;
 }
 
 /* ---------- RESPONSIVE ---------- */

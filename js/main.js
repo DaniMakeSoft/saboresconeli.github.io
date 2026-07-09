@@ -39,6 +39,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // ---------- Galería de trabajos: visor a pantalla completa ----------
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var lightboxCaption = document.getElementById('lightboxCaption');
+  var lightboxClose = document.getElementById('lightboxClose');
+  var galleryItems = document.querySelectorAll('.gallery-item');
+
+  galleryItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+      lightboxImg.src = item.getAttribute('data-full');
+      lightboxImg.alt = item.getAttribute('data-caption') || '';
+      lightboxCaption.textContent = item.getAttribute('data-caption') || '';
+      lightbox.showModal();
+    });
+  });
+
+  if (lightboxClose && lightbox) {
+    lightboxClose.addEventListener('click', function () {
+      lightbox.close();
+    });
+    // Cerrar al pulsar fuera de la imagen (sobre el backdrop)
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) lightbox.close();
+    });
+  }
+
   // ---------- Scroll reveal ----------
   var revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {

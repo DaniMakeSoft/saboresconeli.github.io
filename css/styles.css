@@ -65,6 +65,7 @@ h1, h2, h3 {
   justify-content: space-between;
   padding: 16px 24px;
   gap: 24px;
+  position: relative;
 }
 
 .logo {
@@ -76,24 +77,75 @@ h1, h2, h3 {
 }
 .logo span { color: var(--dorado); font-style: italic; }
 
-.main-nav { display: flex; gap: 28px; }
+/* ---------- NAV / MENÚ HAMBURGUESA ---------- */
+.main-nav {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--crema);
+  border-bottom: 1px solid var(--rosa-suave);
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.main-nav.active { max-height: 300px; }
+
 .main-nav a {
+  display: block;
   text-decoration: none;
   color: var(--cacao-suave);
   font-size: 0.95rem;
+  padding: 14px 24px;
+  border-top: 1px solid var(--rosa-suave);
 }
-.main-nav a:hover { color: var(--dorado); }
+.main-nav a:hover,
+.main-nav a.active-page { color: var(--dorado); }
 
-.btn-whatsapp {
-  background: var(--cacao);
-  color: var(--crema);
-  padding: 10px 18px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  white-space: nowrap;
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
 }
-.btn-whatsapp:hover { background: var(--dorado); color: var(--cacao); }
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--cacao);
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* En pantallas grandes, menú horizontal normal */
+@media (min-width: 768px) {
+  .hamburger { display: none; }
+  .main-nav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    max-height: none;
+    overflow: visible;
+    width: auto;
+    background: none;
+    border-bottom: none;
+  }
+  .main-nav a { border-top: none; padding: 0; }
+  .main-nav { gap: 28px; }
+}
 
 /* ---------- HERO ---------- */
 .hero {
@@ -200,7 +252,7 @@ h1, h2, h3 {
   color: var(--cacao);
 }
 
-/* ---------- PEDIDOS ---------- */
+/* ---------- TRABAJOS ---------- */
 .pedidos {
   background: var(--cacao);
   color: var(--crema);
@@ -247,7 +299,5 @@ h1, h2, h3 {
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 720px) {
-  .header-inner { flex-wrap: wrap; }
-  .main-nav { order: 3; width: 100%; justify-content: center; gap: 18px; }
   .hero { padding: 90px 0 60px; }
 }

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú — Sabores con Eli</title>
+<meta name="description" content="Descubre nuestros dulces, salados y bebidas de repostería artesanal.">
+
+<!-- Tipografías -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..900;1,300..900&family=Work+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Estilos -->
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html#inicio" class="logo">Sabores <span>con Eli</span></a>
+
+    <nav class="main-nav" id="menu">
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="productos.html" class="active-page">Menú</a>
+      <a href="index.html#trabajos">Trabajos</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-controls="menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MENÚ ============ -->
+<section id="productos" class="section menu">
+  <div class="container">
+    <p class="eyebrow reveal">Carta</p>
+    <h2 class="reveal">Nuestro menú</h2>
+
+    <div class="menu-tabs reveal">
+      <button class="tab-btn active" data-tab="dulces">Dulces</button>
+      <button class="tab-btn" data-tab="salados">Salados</button>
+      <button class="tab-btn" data-tab="bebidas">Bebidas</button>
+    </div>
+
+    <div class="menu-panel active" id="dulces">
+      <div class="ticket-grid">
+        <article class="ticket-card">
+          <span class="ticket-code">D-01</span>
+          <h3>Tarta de queso</h3>
+          <p>Horneada al estilo tradicional, textura cremosa.</p>
+          <span class="ticket-price">00 €</span>
+        </article>
+        <article class="ticket-card">
+          <span class="ticket-code">D-02</span>
+          <h3>Brownie de chocolate</h3>
+          <p>Chocolate negro 70% y nuez de California.</p>
+          <span class="ticket-price">00 €</span>
+        </article>
+        <article class="ticket-card">
+          <span class="ticket-code">D-03</span>
+          <h3>Croissant relleno</h3>
+          <p>Hojaldre de mantequilla con crema pastelera.</p>
+          <span class="ticket-price">00 €</span>
+        </article>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="salados">
+      <div class="ticket-grid">
+        <article class="ticket-card">
+          <span class="ticket-code">S-01</span>
+          <h3>Empanada casera</h3>
+          <p>Masa fina, relleno de atún o carne.</p>
+          <span class="ticket-price">00 €</span>
+        </article>
+        <article class="ticket-card">
+          <span class="ticket-code">S-02</span>
+          <h3>Quiche de verduras</h3>
+          <p>Con verduras de temporada y queso curado.</p>
+          <span class="ticket-price">00 €</span>
+        </article>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="bebidas">
+      <div class="ticket-grid">
+        <article class="ticket-card">
+          <span class="ticket-code">B-01</span>
+          <h3>Café de especialidad</h3>
+          <p>Tueste propio, molido al momento.</p>
+          <span class="ticket-price">00 €</span>
+        </article>
+        <article class="ticket-card">
+          <span class="ticket-code">B-02</span>
+          <h3>Limonada natural</h3>
+          <p>Con menta fresca y un toque de jengibre.</p>
+          <span class="ticket-price">00 €</span>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contacto" class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="logo footer-logo">Sabores <span>con Eli</span></p>
+      <p>Calle Ejemplo, 12 · Madrid</p>
+      <p>Martes a domingo · 9:00–20:00</p>
+    </div>
+    <div>
+      <p>info@saboresconeli.es</p>
+      <p>+34 600 00 00 00</p>
+    </div>
+  </div>
+  <p class="footer-note">© 2026 Sabores con Eli. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Script -->
+<script src="js/main.js"></script>
+</body>
+</html>

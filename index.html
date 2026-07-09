@@ -19,16 +19,20 @@
 <!-- ============ HEADER ============ -->
 <header class="site-header">
   <div class="container header-inner">
-    <a href="#inicio" class="logo">Sabores <span>con Eli</span></a>
-    <nav class="main-nav">
-      <a href="#nosotros">Nosotros</a>
-      <a href="#menu">Menú</a>
-      <a href="#pedidos">Pedidos</a>
-      <a href="#contacto">Contacto</a>
+    <a href="index.html#inicio" class="logo">Sabores <span>con Eli</span></a>
+
+    <nav class="main-nav" id="menu">
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="productos.html">Menú</a>
+      <a href="index.html#trabajos">Trabajos</a>
+      <a href="index.html#contacto">Contacto</a>
     </nav>
-    <a href="https://wa.me/34600000000" class="btn-whatsapp" target="_blank" rel="noopener">
-      Pedir por WhatsApp
-    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-controls="menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </header>
 
@@ -42,8 +46,8 @@
       de verdad. Recoge en tienda o pide para llevar.
     </p>
     <div class="hero-actions reveal">
-      <a href="#menu" class="btn btn-primary">Ver el menú</a>
-      <a href="https://wa.me/34600000000" class="btn btn-outline" target="_blank" rel="noopener">Hacer pedido</a>
+      <a href="productos.html" class="btn btn-primary">Ver el menú</a>
+      <a href="index.html#trabajos" class="btn btn-outline">Trabajos por encargo</a>
     </div>
   </div>
 </section>
@@ -62,89 +66,16 @@
   </div>
 </section>
 
-<!-- ============ MENÚ ============ -->
-<section id="menu" class="section menu">
-  <div class="container">
-    <p class="eyebrow reveal">Carta</p>
-    <h2 class="reveal">Nuestro menú</h2>
-
-    <div class="menu-tabs reveal">
-      <button class="tab-btn active" data-tab="dulces">Dulces</button>
-      <button class="tab-btn" data-tab="salados">Salados</button>
-      <button class="tab-btn" data-tab="bebidas">Bebidas</button>
-    </div>
-
-    <div class="menu-panel active" id="dulces">
-      <div class="ticket-grid">
-        <article class="ticket-card">
-          <span class="ticket-code">D-01</span>
-          <h3>Tarta de queso</h3>
-          <p>Horneada al estilo tradicional, textura cremosa.</p>
-          <span class="ticket-price">00 €</span>
-        </article>
-        <article class="ticket-card">
-          <span class="ticket-code">D-02</span>
-          <h3>Brownie de chocolate</h3>
-          <p>Chocolate negro 70% y nuez de California.</p>
-          <span class="ticket-price">00 €</span>
-        </article>
-        <article class="ticket-card">
-          <span class="ticket-code">D-03</span>
-          <h3>Croissant relleno</h3>
-          <p>Hojaldre de mantequilla con crema pastelera.</p>
-          <span class="ticket-price">00 €</span>
-        </article>
-      </div>
-    </div>
-
-    <div class="menu-panel" id="salados">
-      <div class="ticket-grid">
-        <article class="ticket-card">
-          <span class="ticket-code">S-01</span>
-          <h3>Empanada casera</h3>
-          <p>Masa fina, relleno de atún o carne.</p>
-          <span class="ticket-price">00 €</span>
-        </article>
-        <article class="ticket-card">
-          <span class="ticket-code">S-02</span>
-          <h3>Quiche de verduras</h3>
-          <p>Con verduras de temporada y queso curado.</p>
-          <span class="ticket-price">00 €</span>
-        </article>
-      </div>
-    </div>
-
-    <div class="menu-panel" id="bebidas">
-      <div class="ticket-grid">
-        <article class="ticket-card">
-          <span class="ticket-code">B-01</span>
-          <h3>Café de especialidad</h3>
-          <p>Tueste propio, molido al momento.</p>
-          <span class="ticket-price">00 €</span>
-        </article>
-        <article class="ticket-card">
-          <span class="ticket-code">B-02</span>
-          <h3>Limonada natural</h3>
-          <p>Con menta fresca y un toque de jengibre.</p>
-          <span class="ticket-price">00 €</span>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PEDIDOS ============ -->
-<section id="pedidos" class="section pedidos">
+<!-- ============ TRABAJOS ============ -->
+<section id="trabajos" class="section pedidos">
   <div class="container pedidos-inner">
-    <p class="eyebrow reveal">¿Cómo pedir?</p>
-    <h2 class="reveal">Encarga en un mensaje</h2>
+    <p class="eyebrow reveal">Encargos personalizados</p>
+    <h2 class="reveal">Trabajos a medida</h2>
     <p class="reveal">
-      Escríbenos por WhatsApp con lo que quieras y te confirmamos la hora
-      de recogida. Sin colas, sin esperas.
+      Tartas de cumpleaños, mesas dulces para eventos y catering para
+      celebraciones. Cuéntanos qué necesitas y lo preparamos contigo.
     </p>
-    <a href="https://wa.me/34600000000" class="btn btn-primary reveal" target="_blank" rel="noopener">
-      Escribir por WhatsApp
-    </a>
+    <a href="index.html#contacto" class="btn btn-primary reveal">Contactar</a>
   </div>
 </section>
 

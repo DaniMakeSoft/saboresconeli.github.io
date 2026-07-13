@@ -84,6 +84,30 @@ h1, h2, h3 {
   height: auto;
   display: block;
   margin: 0 auto;
+  position: relative;
+  animation: titlePulse 4s ease-in-out infinite;
+}
+
+.brand-hero-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.6) 50%, transparent 60%);
+  animation: titleSparkle 4s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes titlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+@keyframes titleSparkle {
+  0%, 70%, 100% { left: -100%; }
+  85% { left: 130%; }
 }
 
 @keyframes logoPulse {
@@ -108,7 +132,7 @@ h1, h2, h3 {
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 24px;
   position: relative;
 }
@@ -163,6 +187,8 @@ h1, h2, h3 {
   border: none;
   cursor: pointer;
   z-index: 20;
+  position: absolute;
+  right: 24px;
 }
 
 .hamburger span {
@@ -374,6 +400,8 @@ h1, h2, h3 {
   .reveal { opacity: 1; transform: none; transition: none; }
   .brand-hero-logo { animation: none; }
   .brand-hero-logo::after { animation: none; }
+  .brand-hero-title { animation: none; }
+  .brand-hero-title::after { animation: none; }
   .ticket-card { transform: none; }
   .ticket-card:hover { transform: translateY(-4px); }
 }

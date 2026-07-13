@@ -404,6 +404,98 @@ h1, h2, h3 {
   object-fit: contain;
 }
 
+/* ---------- CONTACTO ---------- */
+.contacto { text-align: center; }
+.contacto h2 { margin-bottom: 40px; }
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  text-align: left;
+}
+
+.contacto-bloque { margin-bottom: 24px; }
+.contacto-bloque h3 {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dorado);
+  margin-bottom: 6px;
+}
+.contacto-bloque p { color: var(--cacao-suave); }
+.contacto-bloque a {
+  color: var(--cacao-suave);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.contacto-bloque a:hover { color: var(--dorado); }
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 14px 18px;
+  border: 1px solid var(--rosa);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--texto);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  border-color: var(--dorado);
+}
+.contacto-form textarea { resize: vertical; }
+.contacto-form .btn { align-self: flex-start; cursor: pointer; }
+
+@media (max-width: 700px) {
+  .contacto-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* ---------- FOOTER SOCIAL ---------- */
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+.footer-social a {
+  color: var(--cacao-suave);
+  transition: color 0.2s;
+}
+.footer-social a:hover { color: var(--dorado); }
+.footer-inner a { text-decoration: none; }
+
+/* ---------- WHATSAPP FLOTANTE ---------- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  background: #25d366;
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 720px) {
   .hero { padding: 90px 0 60px; }

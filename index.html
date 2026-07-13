@@ -4,7 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sabores con Eli — Repostería y comida para llevar</title>
-<meta name="description" content="Repostería artesanal y comida para llevar. Tartas, dulces y platos caseros hechos con cariño.">
+<meta name="description" content="Repostería artesanal y comida para llevar. Tartas, dulces y platos caseros hechos con cariño en Madrid.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Sabores con Eli — Repostería y comida para llevar">
+<meta property="og:description" content="Tartas, dulces y platos caseros preparados cada día con ingredientes de verdad. Recoge en tienda o pide para llevar.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://saboresconeli.es">
+<meta property="og:image" content="https://saboresconeli.es/assets/img/tarta_pistacho.png">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Sabores con Eli">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sabores con Eli — Repostería y comida para llevar">
+<meta name="twitter:description" content="Tartas, dulces y platos caseros preparados cada día con ingredientes de verdad.">
+<meta name="twitter:image" content="https://saboresconeli.es/assets/img/tarta_pistacho.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/img/logo.png">
 
 <!-- Tipografías -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,9 +37,9 @@
 <!-- ============ HEADER ============ -->
 <header class="site-header">
   <div class="container header-inner">
-    <a href="index.html#inicio" class="logo">Sabores <span>con Eli <img src="assets/img/logo.png" class="logoImg"></span></a>
+    <a href="index.html#inicio" class="logo" aria-label="Sabores con Eli — Inicio">Sabores <span>con Eli <img src="assets/img/logo.png" class="logoImg" alt="Logo Sabores con Eli"></span></a>
     
-    <nav class="main-nav" id="menu">
+    <nav class="main-nav" id="menu" aria-label="Menú principal">
       <a href="productos.html">Menú</a>
       <a href="trabajos.html">Trabajos</a>
       <a href="index.html#nosotros">Nosotros</a>
@@ -77,13 +95,51 @@
     </p>
     <div class="hero-actions reveal">
       <a href="trabajos.html" class="btn btn-primary">Ver trabajos realizados</a>
-      <a href="index.html#contacto" class="btn btn-outline">Contactar</a>
+      <a href="#contacto" class="btn btn-outline">Contactar</a>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTACTO / FOOTER ============ -->
-<footer id="contacto" class="site-footer">
+<!-- ============ CONTACTO ============ -->
+<section id="contacto" class="section contacto">
+  <div class="container">
+    <p class="eyebrow reveal">¿Hablamos?</p>
+    <h2 class="reveal">Contacto</h2>
+
+    <div class="contacto-grid reveal">
+      <div class="contacto-info">
+        <div class="contacto-bloque">
+          <h3>Dirección</h3>
+          <p>Calle Ejemplo, 12 · Madrid</p>
+        </div>
+        <div class="contacto-bloque">
+          <h3>Horario</h3>
+          <p>Martes a domingo · 9:00–20:00</p>
+        </div>
+        <div class="contacto-bloque">
+          <h3>Teléfono</h3>
+          <p><a href="tel:+34600000000">+34 600 00 00 00</a></p>
+        </div>
+        <div class="contacto-bloque">
+          <h3>Email</h3>
+          <p><a href="mailto:info@saboresconeli.es">info@saboresconeli.es</a></p>
+        </div>
+      </div>
+
+      <form class="contacto-form" action="https://formsubmit.co/info@saboresconeli.es" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu email" required>
+        <textarea name="mensaje" rows="5" placeholder="Cuéntanos qué necesitas..." required></textarea>
+        <input type="hidden" name="_next" value="https://saboresconeli.es/index.html#contacto">
+        <input type="hidden" name="_captcha" value="false">
+        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
   <div class="container footer-inner">
     <div>
       <p class="logo footer-logo">Sabores <span>con Eli</span></p>
@@ -91,12 +147,22 @@
       <p>Martes a domingo · 9:00–20:00</p>
     </div>
     <div>
-      <p>info@saboresconeli.es</p>
-      <p>+34 600 00 00 00</p>
+      <p><a href="mailto:info@saboresconeli.es">info@saboresconeli.es</a></p>
+      <p><a href="tel:+34600000000">+34 600 00 00 00</a></p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
     </div>
   </div>
   <p class="footer-note">© 2026 Sabores con Eli. Todos los derechos reservados.</p>
 </footer>
+
+<!-- ============ BOTÓN FLotante WHATSAPP ============ -->
+<a href="https://wa.me/34600000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
 <!-- Script -->
 <script src="js/main.js"></script>

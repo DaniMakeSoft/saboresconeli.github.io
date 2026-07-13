@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 80" width="480" height="80">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,600&display=swap');
+    .title { font-family: 'Fraunces', serif; font-weight: 600; font-style: italic; }
+    .cacao { fill: #3b2417; }
+    .dorado { fill: #c79a4b; }
+  </style>
+  <text x="50%" y="55%" text-anchor="middle" dominant-baseline="middle" class="title">
+    <tspan class="cacao" font-size="42">Sabores </tspan><tspan class="dorado" font-size="42">con Eli</tspan>
+  </text>
+</svg>

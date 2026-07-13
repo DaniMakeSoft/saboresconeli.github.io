@@ -46,8 +46,53 @@ h1, h2, h3 {
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--dorado);
+  color: var(--cacao);
   margin-bottom: 8px;
+}
+
+/* ---------- BRAND HERO (logo + texto arriba del header) ---------- */
+.brand-hero {
+  text-align: center;
+  padding: 48px 24px 36px;
+  background: linear-gradient(180deg, var(--rosa-suave), var(--crema));
+}
+
+.brand-hero-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 16px;
+  display: inline-block;
+  position: relative;
+  animation: logoPulse 3s ease-in-out infinite;
+}
+
+.brand-hero-logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.7) 50%, transparent 60%);
+  animation: logoSparkle 3s ease-in-out infinite;
+}
+
+.brand-hero-title {
+  width: min(400px, 80vw);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes logoPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes logoSparkle {
+  0%, 70%, 100% { left: -100%; }
+  85% { left: 130%; }
 }
 
 /* ---------- HEADER ---------- */
@@ -298,6 +343,8 @@ h1, h2, h3 {
 
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
+  .brand-hero-logo { animation: none; }
+  .brand-hero-logo::after { animation: none; }
 }
 
 /* ---------- GALERÍA DE TRABAJOS ---------- */

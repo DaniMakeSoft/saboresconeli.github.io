@@ -16,6 +16,7 @@
   --font-display: 'Fraunces', serif;
   --font-body: 'Work Sans', sans-serif;
   --font-mono: 'Space Mono', monospace;
+  --font-handwritten: 'Caveat', cursive;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -262,41 +263,69 @@ h1, h2, h3 {
 .ticket-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
+  gap: 28px;
 }
 
 .ticket-card {
   position: relative;
-  background: #fff;
-  border: 1px dashed var(--dorado);
-  border-radius: 12px;
-  padding: 24px;
+  background: #fdf8f0;
+  border: none;
+  border-radius: 4px;
+  padding: 28px 24px;
+  transform: rotate(-0.8deg);
+  box-shadow: 2px 3px 10px rgba(59,36,23,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.ticket-card::before,
+.ticket-card:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 4px 6px 16px rgba(59,36,23,0.18);
+}
+.ticket-card::before {
+  content: "";
+  position: absolute;
+  top: -5px; right: -5px; bottom: -5px; left: -5px;
+  border: 2px solid var(--rosa);
+  border-radius: 6px;
+  pointer-events: none;
+}
 .ticket-card::after {
   content: "";
   position: absolute;
-  width: 16px;
-  height: 16px;
-  background: var(--crema);
+  bottom: 10px;
+  right: 14px;
+  width: 36px;
+  height: 30px;
+  background: radial-gradient(ellipse at center, rgba(199,154,75,0.12) 0%, transparent 70%);
   border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
+  pointer-events: none;
 }
-.ticket-card::before { left: -8px; }
-.ticket-card::after { right: -8px; }
 
 .ticket-code {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
   color: var(--dorado);
 }
-.ticket-card h3 { margin: 8px 0 6px; font-size: 1.2rem; }
-.ticket-card p { color: var(--cacao-suave); font-size: 0.9rem; margin-bottom: 16px; }
-.ticket-price {
-  font-family: var(--font-mono);
-  font-weight: 700;
+.ticket-card h3 {
+  font-family: var(--font-handwritten);
+  font-size: 1.5rem;
   color: var(--cacao);
+  margin: 2px 0 6px;
+  font-weight: 500;
+}
+.ticket-card p {
+  color: var(--cacao-suave);
+  font-size: 0.88rem;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.ticket-price {
+  font-family: var(--font-handwritten);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--cacao);
+  display: block;
+  text-align: right;
 }
 
 /* ---------- TRABAJOS ---------- */
@@ -345,6 +374,8 @@ h1, h2, h3 {
   .reveal { opacity: 1; transform: none; transition: none; }
   .brand-hero-logo { animation: none; }
   .brand-hero-logo::after { animation: none; }
+  .ticket-card { transform: none; }
+  .ticket-card:hover { transform: translateY(-4px); }
 }
 
 /* ---------- GALERÍA DE TRABAJOS ---------- */

@@ -242,7 +242,12 @@ h1, h2, h3 {
   justify-content: center;
   flex-wrap: wrap;
 }
-
+.hero-cartel img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 .btn {
   display: inline-block;
   padding: 14px 28px;
